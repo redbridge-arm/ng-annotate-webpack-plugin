@@ -17,6 +17,8 @@ module.exports = {
     plugins: [
         new ngAnnotatePlugin({
             add: true,
+            sourceMap: false,
+            // chunks: []
             // other ng-annotate options here
         })
     ]

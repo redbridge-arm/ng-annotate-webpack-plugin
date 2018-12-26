@@ -14,6 +14,11 @@ ngAnnotatePlugin.prototype.apply = function apply(compiler) {
             var files = [];
 
             function getFilesFromChunk(chunk) {
+                if(options.chunks) {
+                    if(options.chunks.indexOf(chunk.name) == -1){
+                        return;
+                    }
+                }
                 files = files.concat(chunk.files);
             }
 
